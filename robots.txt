@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://colomboluca434.github.io/lucacolombo/sitemap.xml
