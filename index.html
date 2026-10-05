@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                    Roboto, Helvetica, Arial, sans-serif;
       color: #222;
       background: #fff;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .container {
@@ -25,8 +30,6 @@
       margin: 0 auto;
       padding: 0 32px;
     }
-
-    /* Navigation */
 
     nav {
       border-bottom: 1px solid #e5e5e5;
@@ -46,79 +49,138 @@
     }
 
     .nav-links a {
-      margin-left: 26px;
+      margin-left: 25px;
       text-decoration: none;
       color: #444;
       font-size: 15px;
     }
 
-    .nav-links a:hover {
+    a {
       color: #1d5d8f;
     }
 
-    /* Main introduction */
+    .nav-links a:hover,
+    .academic-links a:hover {
+      color: #123e61;
+    }
 
     .intro {
       display: grid;
-      grid-template-columns: 330px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 65px;
       align-items: center;
-      padding: 75px 0 65px;
+      padding: 75px 0 70px;
     }
 
     .profile-photo {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 48px;
       font-weight: 500;
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       letter-spacing: -1px;
     }
 
     .title {
       font-size: 21px;
       color: #555;
-      margin-bottom: 28px;
+      margin-bottom: 5px;
+    }
+
+    .affiliation {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 25px;
     }
 
     .bio {
       font-size: 17px;
       color: #333;
-      max-width: 590px;
+      max-width: 610px;
     }
 
-    .bio a {
-      color: #1d5d8f;
+    .academic-links {
+      margin-top: 25px;
+      font-size: 15px;
+    }
+
+    .academic-links a {
       text-decoration: none;
+      margin-right: 18px;
+      color: #1d5d8f;
     }
-
-    /* Research section */
 
     section {
       border-top: 1px solid #e5e5e5;
-      padding: 48px 0;
+      padding: 50px 0;
     }
 
     h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
+      font-size: 30px;
       font-weight: 500;
+      margin: 0 0 30px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 7px;
+    }
+
+    .research-area {
+      margin-bottom: 25px;
+      max-width: 850px;
+    }
+
+    .research-area p {
       margin-top: 0;
+      color: #444;
     }
 
-    .research-interests {
-      font-size: 17px;
-      color: #333;
+    .publication {
+      margin-bottom: 23px;
+      max-width: 900px;
     }
 
-    /* Footer */
+    .paper-title {
+      font-weight: 600;
+    }
+
+    .publication p {
+      margin: 2px 0;
+    }
+
+    .coauthors {
+      color: #555;
+    }
+
+    .journal {
+      font-style: italic;
+    }
+
+    .research-paper {
+      margin-bottom: 20px;
+      max-width: 900px;
+    }
+
+    .section-note {
+      color: #666;
+      font-size: 15px;
+      margin-top: -18px;
+      margin-bottom: 30px;
+    }
+
+    .contact p {
+      margin: 6px 0;
+    }
 
     footer {
       border-top: 1px solid #e5e5e5;
@@ -127,10 +189,7 @@
       font-size: 14px;
     }
 
-    /* Mobile */
-
     @media (max-width: 750px) {
-
       .nav-content {
         display: block;
       }
@@ -141,6 +200,8 @@
 
       .nav-links a {
         margin: 0 15px 0 0;
+        display: inline-block;
+        margin-bottom: 5px;
       }
 
       .intro {
@@ -150,16 +211,14 @@
       }
 
       .profile-photo {
-        width: 100%;
-        max-width: 360px;
-        height: 400px;
+        width: 260px;
+        height: 260px;
       }
 
       h1 {
         font-size: 40px;
       }
     }
-
   </style>
 </head>
 
@@ -167,25 +226,23 @@
 
 <nav>
   <div class="container nav-content">
-
-    <div class="name">
-      Luca Colombo
-    </div>
+    <div class="name">Luca Colombo</div>
 
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#working-papers">Working Papers</a>
       <a href="#teaching">Teaching</a>
-      <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </div>
-
   </div>
 </nav>
 
 
 <main class="container">
+
+  <!-- HOME -->
 
   <div class="intro" id="home">
 
@@ -204,19 +261,43 @@
         Professor of Economics
       </div>
 
+      <div class="affiliation">
+        Affiliated with the Centre for Economics at Paris-Saclay (CEPS)
+      </div>
+
       <div class="bio">
 
         <p>
-          I am a Professor of Economics. My research interests lie
-          in dynamic games, industrial organization, and environmental
-          and natural resource economics.
+          My research focuses on industrial organization,
+          environmental and resource economics, and dynamic games.
+          I study strategic interactions in dynamic environments,
+          with particular emphasis on oligopolistic competition,
+          pricing, natural-resource management, environmental
+          regulation, and international environmental agreements.
         </p>
 
-        <p>
-          My research studies strategic interactions in dynamic
-          economic environments, with applications to firms,
-          environmental policy, natural resources, and markets.
-        </p>
+      </div>
+
+      <div class="academic-links">
+
+        <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
+           target="_blank">
+          Google Scholar
+        </a>
+
+        <a href="https://ideas.repec.org/e/pco107.html"
+           target="_blank">
+          RePEc
+        </a>
+
+        <a href="CV_Luca_Colombo.pdf"
+           target="_blank">
+          CV
+        </a>
+
+        <a href="mailto:colomboluca434@gmail.com">
+          Email
+        </a>
 
       </div>
 
@@ -225,60 +306,240 @@
   </div>
 
 
+  <!-- RESEARCH -->
+
   <section id="research">
 
     <h2>Research</h2>
 
-    <div class="research-interests">
+    <div class="research-area">
+      <h3>Industrial Organization &amp; Strategic Decision-Making</h3>
       <p>
-        <strong>Research interests:</strong>
-        Dynamic Games · Industrial Organization ·
-        Environmental and Resource Economics
+        Dynamic competition, oligopoly, pricing, market structure,
+        innovation, and regulation.
+      </p>
+    </div>
+
+    <div class="research-area">
+      <h3>Environmental &amp; Resource Economics</h3>
+      <p>
+        Natural-resource management, environmental regulation,
+        pollution abatement, and international environmental agreements.
+      </p>
+    </div>
+
+    <div class="research-area">
+      <h3>Dynamic Games &amp; Applied Microeconomics</h3>
+      <p>
+        Deterministic and stochastic dynamic games and strategic
+        interaction under uncertainty.
       </p>
     </div>
 
   </section>
 
 
+  <!-- PUBLICATIONS -->
+
   <section id="publications">
 
-    <h2>Publications</h2>
+    <h2>Selected Publications</h2>
+
+    <div class="publication">
+      <div class="paper-title">
+        Efficiency-inducing lump sum taxation in nonrenewable resource industries
+      </div>
+      <p class="coauthors">
+        with Hassan Benchekroun and Paola Labrecciosa
+      </p>
+      <p>
+        <span class="journal">European Journal of Operational Research</span>,
+        forthcoming.
+      </p>
+    </div>
+
+
+    <div class="publication">
+      <div class="paper-title">
+        A dynamic analysis of criminal networks
+      </div>
+      <p class="coauthors">
+        with Paola Labrecciosa and Agnieszka Rusinowska
+      </p>
+      <p>
+        <span class="journal">Journal of Economic Theory</span>,
+        2025, Vol. 223, 105951.
+      </p>
+    </div>
+
+
+    <div class="publication">
+      <div class="paper-title">
+        Too many or too few? On the optimal number of firms in the commons
+      </div>
+      <p class="coauthors">
+        with Paola Labrecciosa and Leo K. Simon
+      </p>
+      <p>
+        <span class="journal">
+          Journal of Environmental Economics and Management
+        </span>,
+        2023, Vol. 121, Article 102825.
+      </p>
+    </div>
+
+
+    <div class="publication">
+      <div class="paper-title">
+        A dynamic analysis of international environmental agreements
+        under partial cooperation
+      </div>
+      <p class="coauthors">
+        with Paola Labrecciosa and Ngo Van Long
+      </p>
+      <p>
+        <span class="journal">European Economic Review</span>,
+        2022, Vol. 143, Article 104036.
+      </p>
+    </div>
+
+
+    <div class="publication">
+      <div class="paper-title">
+        Dynamic oligopoly pricing with reference-price effects
+      </div>
+      <p class="coauthors">
+        with Paola Labrecciosa
+      </p>
+      <p>
+        <span class="journal">European Journal of Operational Research</span>,
+        2021, Vol. 288, pp. 1006–1016.
+      </p>
+    </div>
+
+
+    <div class="publication">
+      <div class="paper-title">
+        On the Markovian efficiency of Bertrand and Cournot equilibria
+      </div>
+      <p class="coauthors">
+        with Paola Labrecciosa
+      </p>
+      <p>
+        <span class="journal">Journal of Economic Theory</span>,
+        2015, Vol. 155, pp. 332–358.
+      </p>
+    </div>
 
     <p>
-      Selected publications and working papers will be available here.
+      For a complete list of publications, see my
+      <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
+         target="_blank">Google Scholar profile</a>
+      or
+      <a href="https://ideas.repec.org/e/pco107.html"
+         target="_blank">RePEc profile</a>.
     </p>
 
   </section>
 
+
+  <!-- WORKING PAPERS -->
+
+  <section id="working-papers">
+
+    <h2>Research in Progress</h2>
+
+    <p class="section-note">
+      Papers currently under review.
+    </p>
+
+    <div class="research-paper">
+      <div class="paper-title">
+        The dynamics of experience: Noisy learning, spillovers,
+        and forgetting in oligopoly
+      </div>
+      <div class="coauthors">
+        with Paola Labrecciosa
+      </div>
+    </div>
+
+
+    <div class="research-paper">
+      <div class="paper-title">
+        Vertical structure, resource scarcity, and dynamic exploitation
+        of renewable resources
+      </div>
+      <div class="coauthors">
+        with Paola Labrecciosa
+      </div>
+    </div>
+
+
+    <div class="research-paper">
+      <div class="paper-title">
+        Core-Perfect equilibrium: Strategic reducibility and the geometry
+        of multiplicity in high-dimensional dynamic games
+      </div>
+      <div class="coauthors">
+        with Paola Labrecciosa
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- TEACHING -->
 
   <section id="teaching">
 
     <h2>Teaching</h2>
 
     <p>
-      Information on current and previous teaching activities.
+      I have taught courses in microeconomics, industrial organization,
+      environmental and natural resource economics, economic theory,
+      managerial economics, and dynamic economic theory at undergraduate,
+      graduate, MBA, and doctoral levels.
     </p>
-
-  </section>
-
-
-  <section id="cv">
-
-    <h2>Curriculum Vitae</h2>
 
     <p>
-      CV available soon.
+      Further details are available in my
+      <a href="CV_Luca_Colombo.pdf" target="_blank">CV</a>.
     </p>
 
   </section>
 
 
-  <section id="contact">
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
 
     <h2>Contact</h2>
 
     <p>
-      Academic contact information will be available here.
+      <strong>Luca Colombo</strong>
+    </p>
+
+    <p>
+      Centre for Economics at Paris-Saclay (CEPS)
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:colomboluca434@gmail.com">
+        colomboluca434@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
+         target="_blank">
+        Google Scholar
+      </a>
+      &nbsp;·&nbsp;
+      <a href="https://ideas.repec.org/e/pco107.html"
+         target="_blank">
+        RePEc
+      </a>
     </p>
 
   </section>
@@ -287,11 +548,9 @@
 
 
 <footer>
-
   <div class="container">
     © 2026 Luca Colombo
   </div>
-
 </footer>
 
 </body>
