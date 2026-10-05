@@ -1,2 +1,298 @@
-<h1>Luca Colombo</h1>
-<p>Professor of Economics</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luca Colombo | Economics</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Navigation */
+
+    nav {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 22px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links a {
+      margin-left: 26px;
+      text-decoration: none;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #1d5d8f;
+    }
+
+    /* Main introduction */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 65px;
+      align-items: center;
+      padding: 75px 0 65px;
+    }
+
+    .profile-photo {
+      width: 330px;
+      height: 400px;
+      object-fit: cover;
+      object-position: 42% center;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      font-weight: 500;
+      margin: 0 0 8px;
+      letter-spacing: -1px;
+    }
+
+    .title {
+      font-size: 21px;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    .bio {
+      font-size: 17px;
+      color: #333;
+      max-width: 590px;
+    }
+
+    .bio a {
+      color: #1d5d8f;
+      text-decoration: none;
+    }
+
+    /* Research section */
+
+    section {
+      border-top: 1px solid #e5e5e5;
+      padding: 48px 0;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    .research-interests {
+      font-size: 17px;
+      color: #333;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 750px) {
+
+      .nav-content {
+        display: block;
+      }
+
+      .nav-links {
+        margin-top: 12px;
+      }
+
+      .nav-links a {
+        margin: 0 15px 0 0;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 45px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        max-width: 360px;
+        height: 400px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-content">
+
+    <div class="name">
+      Luca Colombo
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<main class="container">
+
+  <div class="intro" id="home">
+
+    <div>
+      <img
+        src="IMG_9270.jpeg"
+        alt="Luca Colombo"
+        class="profile-photo">
+    </div>
+
+    <div>
+
+      <h1>Luca Colombo</h1>
+
+      <div class="title">
+        Professor of Economics
+      </div>
+
+      <div class="bio">
+
+        <p>
+          I am a Professor of Economics. My research interests lie
+          in dynamic games, industrial organization, and environmental
+          and natural resource economics.
+        </p>
+
+        <p>
+          My research studies strategic interactions in dynamic
+          economic environments, with applications to firms,
+          environmental policy, natural resources, and markets.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section id="research">
+
+    <h2>Research</h2>
+
+    <div class="research-interests">
+      <p>
+        <strong>Research interests:</strong>
+        Dynamic Games · Industrial Organization ·
+        Environmental and Resource Economics
+      </p>
+    </div>
+
+  </section>
+
+
+  <section id="publications">
+
+    <h2>Publications</h2>
+
+    <p>
+      Selected publications and working papers will be available here.
+    </p>
+
+  </section>
+
+
+  <section id="teaching">
+
+    <h2>Teaching</h2>
+
+    <p>
+      Information on current and previous teaching activities.
+    </p>
+
+  </section>
+
+
+  <section id="cv">
+
+    <h2>Curriculum Vitae</h2>
+
+    <p>
+      CV available soon.
+    </p>
+
+  </section>
+
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+      Academic contact information will be available here.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    © 2026 Luca Colombo
+  </div>
+
+</footer>
+
+</body>
+</html>
