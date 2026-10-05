@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Luca Colombo | Economics</title>
+  <title>Luca Colombo | Economics | Dynamic Games, Industrial Organization & Environmental Economics</title>
+
+  <meta name="description"
+        content="Luca Colombo is an economist affiliated with the Centre for Economics at Paris-Saclay (CEPS). His research focuses on industrial organization, environmental and resource economics, and dynamic games.">
+
+  <meta name="author" content="Luca Colombo">
+  <meta name="robots" content="index, follow">
 
   <style>
     * {
@@ -18,8 +24,7 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
       background: #fff;
       line-height: 1.65;
@@ -33,43 +38,52 @@
 
     nav {
       border-bottom: 1px solid #e5e5e5;
-      padding: 22px 0;
+      background: #fff;
     }
 
-    .nav-content {
+    .nav-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 20px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 30px;
     }
 
-    .name {
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
+    .nav-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
     }
 
     .nav-links a {
-      margin-left: 25px;
-      text-decoration: none;
       color: #444;
-      font-size: 15px;
+      text-decoration: none;
+      font-size: 14px;
     }
 
-    a {
-      color: #1d5d8f;
+    .nav-links a:hover {
+      color: #1d5d91;
     }
 
-    .nav-links a:hover,
-    .academic-links a:hover {
-      color: #123e61;
+    header {
+      padding: 75px 0 65px;
     }
 
-    .intro {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 65px;
+    .profile {
+      display: flex;
       align-items: center;
-      padding: 75px 0 70px;
+      gap: 60px;
     }
 
     .profile-photo {
@@ -78,136 +92,146 @@
       object-fit: cover;
       object-position: center;
       border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      color: #222;
     }
 
     h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 48px;
-      font-weight: 500;
-      margin: 0 0 6px;
-      letter-spacing: -1px;
+      font-size: 46px;
+      margin: 0 0 8px;
+      line-height: 1.15;
     }
 
-    .title {
-      font-size: 21px;
-      color: #555;
-      margin-bottom: 5px;
+    .position {
+      font-size: 20px;
+      margin-bottom: 3px;
     }
 
     .affiliation {
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 25px;
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 24px;
     }
 
     .bio {
+      max-width: 650px;
       font-size: 17px;
-      color: #333;
-      max-width: 610px;
     }
 
-    .academic-links {
-      margin-top: 25px;
-      font-size: 15px;
+    .profile-links {
+      margin-top: 24px;
     }
 
-    .academic-links a {
+    a {
+      color: #1d5d91;
+    }
+
+    .profile-links a {
       text-decoration: none;
       margin-right: 18px;
-      color: #1d5d8f;
+      font-weight: 500;
     }
 
     section {
+      padding: 58px 0;
       border-top: 1px solid #e5e5e5;
-      padding: 50px 0;
+      scroll-margin-top: 30px;
     }
 
     h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 500;
+      font-size: 32px;
       margin: 0 0 30px;
     }
 
     h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 7px;
+      font-size: 21px;
+      margin-bottom: 8px;
     }
 
-    .research-area {
-      margin-bottom: 25px;
-      max-width: 850px;
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
     }
 
-    .research-area p {
+    .research-grid p {
       margin-top: 0;
       color: #444;
     }
 
     .publication {
-      margin-bottom: 23px;
-      max-width: 900px;
+      margin-bottom: 21px;
+    }
+
+    .publication-title {
+      font-weight: 600;
+    }
+
+    .publication-details {
+      color: #555;
+    }
+
+    .paper {
+      margin-bottom: 22px;
     }
 
     .paper-title {
       font-weight: 600;
     }
 
-    .publication p {
-      margin: 2px 0;
+    .status {
+      color: #777;
+      font-size: 14px;
+      margin-top: 3px;
     }
 
-    .coauthors {
-      color: #555;
+    .cv-block {
+      margin-bottom: 38px;
     }
 
-    .journal {
-      font-style: italic;
+    .cv-item {
+      margin-bottom: 15px;
     }
 
-    .research-paper {
-      margin-bottom: 20px;
-      max-width: 900px;
-    }
-
-    .section-note {
-      color: #666;
-      font-size: 15px;
-      margin-top: -18px;
-      margin-bottom: 30px;
+    .cv-date {
+      color: #777;
     }
 
     .contact p {
-      margin: 6px 0;
+      margin: 5px 0;
     }
 
     footer {
       border-top: 1px solid #e5e5e5;
-      padding: 30px 0 45px;
+      padding: 30px 0 40px;
       color: #777;
       font-size: 14px;
     }
 
-    @media (max-width: 750px) {
-      .nav-content {
-        display: block;
+    @media (max-width: 800px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
       }
 
       .nav-links {
-        margin-top: 12px;
+        gap: 14px;
       }
 
-      .nav-links a {
-        margin: 0 15px 0 0;
-        display: inline-block;
-        margin-bottom: 5px;
+      header {
+        padding-top: 50px;
       }
 
-      .intro {
-        grid-template-columns: 1fr;
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 35px;
-        padding-top: 45px;
       }
 
       .profile-photo {
@@ -216,7 +240,25 @@
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 38px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container,
+      .nav-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .profile-photo {
+        width: 220px;
+        height: 220px;
       }
     }
   </style>
@@ -225,424 +267,372 @@
 <body>
 
 <nav>
-  <div class="container nav-content">
-    <div class="name">Luca Colombo</div>
+  <div class="nav-inner">
+    <a class="nav-name" href="#home">Luca Colombo</a>
 
     <div class="nav-links">
-      <a href="#home">Home</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#working-papers">Working Papers</a>
-      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
+<header id="home">
+  <div class="container">
+    <div class="profile">
 
-<main class="container">
+      <img src="IMG_7242.jpeg"
+           alt="Luca Colombo"
+           class="profile-photo">
 
-  <!-- HOME -->
+      <div>
+        <h1>Luca Colombo</h1>
 
-  <div class="intro" id="home">
+        <div class="position">Professor of Economics</div>
 
-    <div>
-      <img
-        src="IMG_7242.jpeg"
-        alt="Luca Colombo"
-        class="profile-photo">
-    </div>
+        <div class="affiliation">
+          Affiliated with the Centre for Economics at Paris-Saclay (CEPS)
+        </div>
 
-    <div>
-
-      <h1>Luca Colombo</h1>
-
-      <div class="title">
-        Professor of Economics
-      </div>
-
-      <div class="affiliation">
-        Affiliated with the Centre for Economics at Paris-Saclay (CEPS)
-      </div>
-
-      <div class="bio">
-
-        <p>
-          My research focuses on industrial organization,
-          environmental and resource economics, and dynamic games.
-          I study strategic interactions in dynamic environments,
-          with particular emphasis on oligopolistic competition,
-          pricing, natural-resource management, environmental
+        <div class="bio">
+          My research focuses on industrial organization, environmental and
+          resource economics, and dynamic games. I study strategic interactions
+          in dynamic environments, with particular emphasis on oligopolistic
+          competition, pricing, natural-resource management, environmental
           regulation, and international environmental agreements.
-        </p>
+        </div>
 
-      </div>
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
+             target="_blank" rel="noopener">Google Scholar</a>
 
-      <div class="academic-links">
+          <a href="https://ideas.repec.org/e/pco107.html"
+             target="_blank" rel="noopener">RePEc</a>
 
-        <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
-           target="_blank">
-          Google Scholar
-        </a>
-
-        <a href="https://ideas.repec.org/e/pco107.html"
-           target="_blank">
-          RePEc
-        </a>
-
-        <a href="CV_Luca_Colombo.pdf"
-           target="_blank">
-          CV
-        </a>
-
-        <a href="mailto:colomboluca434@gmail.com">
-          Email
-        </a>
-
+          <a href="mailto:colomboluca434@gmail.com">Email</a>
+        </div>
       </div>
 
     </div>
-
   </div>
+</header>
 
 
-  <!-- RESEARCH -->
-
-  <section id="research">
-
+<section id="research">
+  <div class="container">
     <h2>Research</h2>
 
-    <div class="research-area">
-      <h3>Industrial Organization &amp; Strategic Decision-Making</h3>
-      <p>
-        Dynamic competition, oligopoly, pricing, market structure,
-        innovation, and regulation.
-      </p>
+    <div class="research-grid">
+
+      <div>
+        <h3>Industrial Organization &amp; Strategic Decision-Making</h3>
+        <p>
+          Dynamic competition, oligopoly, pricing, market structure,
+          innovation, and regulation.
+        </p>
+      </div>
+
+      <div>
+        <h3>Environmental &amp; Resource Economics</h3>
+        <p>
+          Natural-resource management, environmental regulation,
+          pollution abatement, and international environmental agreements.
+        </p>
+      </div>
+
+      <div>
+        <h3>Dynamic Games &amp; Applied Microeconomics</h3>
+        <p>
+          Deterministic and stochastic dynamic games and strategic
+          interaction under uncertainty.
+        </p>
+      </div>
+
     </div>
-
-    <div class="research-area">
-      <h3>Environmental &amp; Resource Economics</h3>
-      <p>
-        Natural-resource management, environmental regulation,
-        pollution abatement, and international environmental agreements.
-      </p>
-    </div>
-
-    <div class="research-area">
-      <h3>Dynamic Games &amp; Applied Microeconomics</h3>
-      <p>
-        Deterministic and stochastic dynamic games and strategic
-        interaction under uncertainty.
-      </p>
-    </div>
-
-  </section>
-
-
-  
-
-  <!-- PUBLICATIONS -->
-
-<section id="publications">
-
-  <h2>Selected Publications</h2>
-
-  <div class="publication">
-    <div class="paper-title">
-      Efficiency-inducing lump sum taxation in nonrenewable resource industries
-    </div>
-    <p class="coauthors">
-      with Hassan Benchekroun and Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">European Journal of Operational Research</span>,
-      forthcoming.
-    </p>
   </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      A dynamic analysis of criminal networks
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa and Agnieszka Rusinowska
-    </p>
-    <p>
-      <span class="journal">Journal of Economic Theory</span>,
-      2025, Vol. 223, 105951.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Too many or too few? On the optimal number of firms in the commons
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa and Leo K. Simon
-    </p>
-    <p>
-      <span class="journal">Journal of Environmental Economics and Management</span>,
-      2023, Vol. 121, Article 102825.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      A dynamic analysis of international environmental agreements under partial cooperation
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa and Ngo Van Long
-    </p>
-    <p>
-      <span class="journal">European Economic Review</span>,
-      2022, Vol. 143, Article 104036.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Product quality differentiation in a renewable resource oligopoly
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Environmental Economics and Management</span>,
-      2022, Vol. 111, Article 102583.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      A stochastic differential game of duopolistic competition with sticky prices
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Economic Dynamics and Control</span>,
-      2021, Vol. 122, Article 104030.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Dynamic oligopoly pricing with reference-price effects
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">European Journal of Operational Research</span>,
-      2021, Vol. 288, pp. 1006–1016.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Stackelberg vs Cournot: A differential game approach
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Economic Dynamics and Control</span>,
-      2019, Vol. 101, pp. 239–261.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Consumer surplus-enhancing cooperation in a natural resource oligopoly
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Environmental Economics and Management</span>,
-      2018, Vol. 92, pp. 185–193.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      On the Markovian efficiency of Bertrand and Cournot equilibria
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Economic Theory</span>,
-      2015, Vol. 155, pp. 332–358.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      On the convergence to the Cournot equilibrium in a productive asset oligopoly
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Mathematical Economics</span>,
-      2013, Vol. 49, pp. 441–445.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      Oligopoly exploitation of a private property productive asset
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Economic Dynamics and Control</span>,
-      2013, Vol. 37, pp. 838–853.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      How should commodities be taxed? A supergame-theoretic analysis
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">Journal of Public Economics</span>,
-      2013, Vol. 97, pp. 196–205.
-    </p>
-  </div>
-
-  <div class="publication">
-    <div class="paper-title">
-      A note on pricing with risk aversion
-    </div>
-    <p class="coauthors">
-      with Paola Labrecciosa
-    </p>
-    <p>
-      <span class="journal">European Journal of Operational Research</span>,
-      2012, Vol. 216, pp. 252–254.
-    </p>
-  </div>
-
-  <p>
-    For a complete list of publications, see my
-    <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
-       target="_blank">Google Scholar profile</a>
-    or
-    <a href="https://ideas.repec.org/e/pco107.html"
-       target="_blank">RePEc profile</a>.
-  </p>
-
 </section>
 
 
-  <!-- WORKING PAPERS -->
+<section id="publications">
+  <div class="container">
+    <h2>Selected Publications</h2>
 
-  <section id="working-papers">
-
-    <h2>Research in Progress</h2>
-
-    <p class="section-note">
-      Papers currently under review.
-    </p>
-
-    <div class="research-paper">
-      <div class="paper-title">
-        The dynamics of experience: Noisy learning, spillovers,
-        and forgetting in oligopoly
+    <div class="publication">
+      <div class="publication-title">
+        Efficiency-inducing lump sum taxation in nonrenewable resource industries
       </div>
-      <div class="coauthors">
-        with Paola Labrecciosa
+      <div class="publication-details">
+        with Hassan Benchekroun and Paola Labrecciosa.
+        <em>European Journal of Operational Research</em>, forthcoming.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        A dynamic analysis of criminal networks
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa and Agnieszka Rusinowska.
+        <em>Journal of Economic Theory</em>, 2025, 223, 105951.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Too many or too few? On the optimal number of firms in the commons
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa and Leo K. Simon.
+        <em>Journal of Environmental Economics and Management</em>,
+        2023, 121, 102825.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        A dynamic analysis of international environmental agreements under partial cooperation
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa and Ngo Van Long.
+        <em>European Economic Review</em>, 2022, 143, 104036.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Product quality differentiation in a renewable resource oligopoly
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Environmental Economics and Management</em>,
+        2022, 111, 102583.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        A stochastic differential game of duopolistic competition with sticky prices
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Economic Dynamics and Control</em>,
+        2021, 122, 104030.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Dynamic oligopoly pricing with reference-price effects
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>European Journal of Operational Research</em>,
+        2021, 288, 1006–1016.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Stackelberg vs Cournot: A differential game approach
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Economic Dynamics and Control</em>,
+        2019, 101, 239–261.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Consumer surplus-enhancing cooperation in a natural resource oligopoly
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Environmental Economics and Management</em>,
+        2018, 92, 185–193.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        On the Markovian efficiency of Bertrand and Cournot equilibria
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Economic Theory</em>,
+        2015, 155, 332–358.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        On the convergence to the Cournot equilibrium in a productive asset oligopoly
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Mathematical Economics</em>,
+        2013, 49, 441–445.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        Oligopoly exploitation of a private property productive asset
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Economic Dynamics and Control</em>,
+        2013, 37, 838–853.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        How should commodities be taxed? A supergame-theoretic analysis
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>Journal of Public Economics</em>,
+        2013, 97, 196–205.
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="publication-title">
+        A note on pricing with risk aversion
+      </div>
+      <div class="publication-details">
+        with Paola Labrecciosa.
+        <em>European Journal of Operational Research</em>,
+        2012, 216, 252–254.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="working-papers">
+  <div class="container">
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        The dynamics of experience: Noisy learning, spillovers, and forgetting in oligopoly
+      </div>
+      <div>with Paola Labrecciosa</div>
+      <div class="status">Under review</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Vertical structure, resource scarcity, and dynamic exploitation of renewable resources
+      </div>
+      <div>with Paola Labrecciosa</div>
+      <div class="status">Under review</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Core-Perfect equilibrium: Strategic reducibility and the geometry of multiplicity in high-dimensional dynamic games
+      </div>
+      <div>with Paola Labrecciosa</div>
+      <div class="status">Under review</div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="cv">
+  <div class="container">
+    <h2>CV</h2>
+
+    <div class="cv-block">
+      <h3>Academic Appointments</h3>
+
+      <div class="cv-item">
+        <strong>Full Professor</strong>, Rennes School of Business, France
+        <div class="cv-date">2023–Present</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Associate Professor</strong>, Deakin University, Australia
+        <div class="cv-date">2015–2023</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Senior Lecturer</strong>, Deakin University, Australia
+        <div class="cv-date">2009–2015</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Senior Lecturer</strong>, Middlesex University, UK
+        <div class="cv-date">2006–2008</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Lecturer</strong>, Trinity College Dublin, Ireland
+        <div class="cv-date">2005–2006</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Research Fellow</strong>, Trinity College Dublin, Ireland
+        <div class="cv-date">2003–2005</div>
+      </div>
+
+      <div class="cv-item">
+        <strong>Research Fellow</strong>, University of Bologna, Italy
+        <div class="cv-date">2002–2007</div>
       </div>
     </div>
 
 
-    <div class="research-paper">
-      <div class="paper-title">
-        Vertical structure, resource scarcity, and dynamic exploitation
-        of renewable resources
+    <div class="cv-block">
+      <h3>Education</h3>
+
+      <div class="cv-item">
+        <strong>Habilitation à Diriger des Recherches (HDR) in Economic Sciences</strong><br>
+        University Paris 1 Panthéon-Sorbonne, 2021
       </div>
-      <div class="coauthors">
-        with Paola Labrecciosa
+
+      <div class="cv-item">
+        <strong>PhD in Public Finance</strong><br>
+        University of Pavia, 2003
       </div>
+
+      <div class="cv-item">
+        <strong>MPhil in Mathematical Economics and Econometrics</strong><br>
+        Toulouse School of Economics, 2001
+      </div>
+
+      <div class="cv-item">
+        <strong>First-Class Honours Degree in Economics and Political Science</strong><br>
+        University of Bologna, 1999
+      </div>
+
     </div>
 
-
-    <div class="research-paper">
-      <div class="paper-title">
-        Core-Perfect equilibrium: Strategic reducibility and the geometry
-        of multiplicity in high-dimensional dynamic games
-      </div>
-      <div class="coauthors">
-        with Paola Labrecciosa
-      </div>
-    </div>
-
-  </section>
+  </div>
+</section>
 
 
-  <!-- TEACHING -->
-
-  <section id="teaching">
-
-    <h2>Teaching</h2>
-
-    <p>
-      I have taught courses in microeconomics, industrial organization,
-      environmental and natural resource economics, economic theory,
-      and managerial economics at undergraduate,
-      graduate, MBA, and doctoral levels.
-    </p>
-
-    <p>
-      Further details are available in my
-      <a href="CV_Luca_Colombo.pdf" target="_blank">CV</a>.
-    </p>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
+<section id="contact">
+  <div class="container contact">
     <h2>Contact</h2>
 
-    <p>
-      <strong>Luca Colombo</strong>
-    </p>
+    <p>Centre for Economics at Paris-Saclay (CEPS)</p>
 
     <p>
-      Centre for Economics at Paris-Saclay (CEPS)
-    </p>
-
-    <p>
-      Email:
       <a href="mailto:colomboluca434@gmail.com">
         colomboluca434@gmail.com
       </a>
     </p>
-
-    <p>
-      <a href="https://scholar.google.com/citations?user=p6ooBCQAAAAJ&hl=en"
-         target="_blank">
-        Google Scholar
-      </a>
-      &nbsp;·&nbsp;
-      <a href="https://ideas.repec.org/e/pco107.html"
-         target="_blank">
-        RePEc
-      </a>
-    </p>
-
-  </section>
-
-</main>
+  </div>
+</section>
 
 
 <footer>
